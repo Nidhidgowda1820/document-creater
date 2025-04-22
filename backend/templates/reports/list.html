@@ -1,0 +1,20 @@
+<!-- templates/reports/list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Reports</title>
+</head>
+<body>
+    <h1>Reports</h1>
+    <ul>
+        {% for report in reports %}
+            <li>
+                <strong>{{ report.title }}</strong><br>
+                <a href="{{ report.docx_file.url }}">Download DOCX</a> |
+                <a href="{{ report.pdf_file.url }}">Download PDF</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+ 
